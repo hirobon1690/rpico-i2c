@@ -8,8 +8,8 @@ class I2c {
    public:
     I2c(i2c_inst_t* ch = i2c_default, int baud = 100 * 1000);
     void init();
-    void write(uint8_t addr, uint8_t data);
-    void write(uint8_t addr, uint8_t* data, size_t size);
+    int write(uint8_t addr, uint8_t data);
+    int write(uint8_t addr, uint8_t* data, size_t size);
     void read(uint8_t addr, uint8_t* data, size_t size);
 
    private:
